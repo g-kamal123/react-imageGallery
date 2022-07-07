@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Cards(props) {
-  return (
-    <div className='card'>
-          <img src={props.image} alt='tu'/>
+export class Cards extends Component {
+  render() {
+    return (
+      <div className='card'>
+          <img src={this.props.image} alt='tu'/>
         <p>
-        {props.Name}
+        {this.props.Name}
         </p>
         <button>Know more</button>
     </div>
-  )
+    )
+  }
 }
-
-export default Cards

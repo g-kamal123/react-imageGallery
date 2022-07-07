@@ -1,4 +1,5 @@
-import Gallery from "./components/Gallery";
+import {Gallery} from "./components/Gallery";
+import React, { Component } from 'react'
 
 let gallery = [
   {
@@ -46,12 +47,14 @@ let gallery = [
     Name:'Murray Ridge'
   }
 ];
-function App() {
-  return (
-    <div className="App">
+
+export class App extends Component {
+  render() {
+    return (
+      <div className="App">
       <Gallery details={gallery} />
     </div>
-  );
+    )
+  }
 }
 
-export default App;

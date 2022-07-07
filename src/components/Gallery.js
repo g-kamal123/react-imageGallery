@@ -1,16 +1,17 @@
-import React from 'react'
-import Cards from './Cards'
 
-function Gallery(props) {
-  return (
-    <div className='gallery'>
+import {Cards} from './Cards'
+import React, { Component } from 'react'
+
+export class Gallery extends Component {
+  render() {
+    return (
+      <div className='gallery'>
         {
-            props.details.map((item) => <Cards image = {item.image}
+            this.props.details.map((item) => <Cards image = {item.image}
             Name = {item.Name}
             />)
         }
     </div>
-  )
+    )
+  }
 }
-
-export default Gallery
